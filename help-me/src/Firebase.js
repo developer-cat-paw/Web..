@@ -5,13 +5,13 @@ import 'firebase/compat/firestore';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDzBsGGIuClmIq1Up_RDxxMRhU4ykEK2Pk",
-  authDomain: "sexy-b53e8.firebaseapp.com",
-  projectId: "sexy-b53e8",
-  storageBucket: "sexy-b53e8.appspot.com",
-  messagingSenderId: "229263644263",
-  appId: "1:229263644263:web:f4275080438d1ba49366c2",
-  measurementId: "G-S7NHX2X2TD"
+  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECTID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_FIREBASE_APPID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENTID
 };
 
 

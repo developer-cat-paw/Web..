@@ -10,7 +10,7 @@ function Chat() {
         setChatContent([...chatContent, { mine: true, text: inputValue }]);
 
         const configuration = new Configuration({
-            apiKey: "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",
+            apiKey: process.env.REACT_APP_OPENAI_APPID,
         });
         const openai = new OpenAIApi(configuration);
 
@@ -27,15 +27,22 @@ function Chat() {
             .then((result) => {
                 setChatContent([...chatContent, { mine: false, text: result.data.choices[0].text }]);
             });
+            setInputValue("");
     };
 
+    const onKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            console.log("Enter !");
+            sendMessage();
+        }
+    }
     return (
         <div>
             <div className="chat-content">
                 {chatContent.map((content, index) => (
                     <div>
                         <div className="line" key={index}>
-                            <span className={`chats${content.mine ? "mine" : ""}`}>
+                            <span className={`chats${content.mine ? "mine" : ""}`} key={index}>
                                 {content.text}
                             </span>
                         </div>
@@ -49,11 +56,12 @@ function Chat() {
                     id="input"
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
+                    onKeyPress={onKeyPress}
                 />
                 {/* <button className="send" id="send" onClick={sendMessage}>
                 전송
             </button> */}
-                <button className="button-23" id="send" onClick={sendMessage}>Button 23</button>
+                <button className="button-23" id="send" onClick={sendMessage}>Send</button>
             </div>
         </div>
     )

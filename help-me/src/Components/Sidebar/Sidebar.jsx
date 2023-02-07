@@ -9,18 +9,18 @@ const sidebarNavItems = [
         to: '/',
         section: ''
     },
-    {
-        display: 'Getting Started',
-        icon: <i className='bx bx-star'></i>,
-        to: '/started',
-        section: 'started'
-    },
-    {
-        display: 'Calendar',
-        icon: <i className='bx bx-calendar'></i>,
-        to: '/calendar',
-        section: 'calendar'
-    },
+    // {
+    //     display: 'Getting Started',
+    //     icon: <i className='bx bx-star'></i>,
+    //     to: '/started',
+    //     section: 'started'
+    // },
+    // {
+    //     display: 'Calendar',
+    //     icon: <i className='bx bx-calendar'></i>,
+    //     to: '/calendar',
+    //     section: 'calendar'
+    // },
     {
         display: 'User',
         icon: <i className='bx bx-user'></i>,

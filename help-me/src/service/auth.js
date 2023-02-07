@@ -3,6 +3,7 @@ import { authService, firebaseInstance } from '../Firebase';
 import React, { useState } from 'react';
 import './auth.css';
 import logo from '../logo.png'
+import png from '../helpme.jpg';
 
 const Auth = () => {
     const [email, setEmail] = useState('');
@@ -50,20 +51,27 @@ const Auth = () => {
     }
 
     return (
-        <div className='left'>
-            <img className='logo' src={logo}/>
-            <form onSubmit={onSubmit}>
-                <input className='email' name="email" type="email" placeholder="Email" required value={email} onChange={onChange} />
-                <input className='password' name="password" type="password" placeholder="Password" required value={password} onChange={onChange} />
-                <input className='submit' type="submit" value={newAccount ? "Create Account" : "Sign In"} />
-                {error}
-            </form>
-            <div>
-                <button className='swop' onClick={toggleAccount}>{newAccount ? "Sign in" : "Create Account"}</button>
+        <div>
+            <div className='left'>
+                <img className='logo' src={logo} />
+                <form onSubmit={onSubmit}>
+                    <input className='email' name="email" type="email" placeholder="Email" required value={email} onChange={onChange} />
+                    <input className='password' name="password" type="password" placeholder="Password" required value={password} onChange={onChange} />
+                    <input className='submit' type="submit" value={newAccount ? "Create Account" : "Sign In"} />
+                    {error}
+                </form>
+                <div>
+                    <button className='swop' onClick={toggleAccount}>{newAccount ? "Sign in" : "Create Account"}</button>
+                </div>
+                <div>
+                    <button className='google' name="google" onClick={onSocialClick}>Continue with Google</button>
+                </div>
             </div>
-            <div>
-                <button className='google' name="google" onClick={onSocialClick}>Continue with Google</button>
-            </div>
+            {/* <div>
+                <div className='login-png'>
+                    <img src={png}></img>
+                </div>
+            </div> */}
         </div>
     );
 };

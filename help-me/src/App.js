@@ -1,16 +1,28 @@
-import React from 'react';
-import 'boxicons/css/boxicons.min.css';
-import Main from './Pages/main';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import AppRouters from './Pages/main'
+import { authService } from "./Firebase";
 
-const App = ({ auth }) => {
+function App() {
+  const [init, setInit] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    authService.onAuthStateChanged((user) => {
+      if(user){
+        setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
+      }
+      setInit(true)
+    })
+  }, [])
+
   return (
-    <div>
-      <BrowserRouter>
-        <Main />
-      </BrowserRouter>
-    </div>
+    <>
+      { init ? <AppRouters isLoggedIn={isLoggedIn}/> : "Initializing." }
+      <footer>&copy; Nwitter {new Date().getFullYear()}</footer>
+    </>
   );
-};
+}
 
 export default App;

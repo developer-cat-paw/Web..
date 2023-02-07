@@ -28,6 +28,7 @@ function Chat() {
                 setChatContent([...chatContent, { mine: false, text: result.data.choices[0].text }]);
             });
             setInputValue("");
+            console.log(chatContent);
     };
 
     const onKeyPress = (e) => {
@@ -42,7 +43,7 @@ function Chat() {
                 {chatContent.map((content, index) => (
                     <div>
                         <div className="line" key={index}>
-                            <span className={`chats${content.mine ? "mine" : ""}`} key={index}>
+                            <span className={`chats${content.mine ? "mine" : ""}`}>
                                 {content.text}
                             </span>
                         </div>

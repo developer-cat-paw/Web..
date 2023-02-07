@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       { init ? <AppRouters isLoggedIn={isLoggedIn}/> : "Initializing." }
-      <footer>&copy; Nwitter {new Date().getFullYear()}</footer>
+      {/* <footer>&copy;  {new Date().getFullYear()}</footer> */}
     </>
   );
 }

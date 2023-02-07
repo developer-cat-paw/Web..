@@ -1,0 +1,11 @@
+.bg {
+    z-index: -500;
+    position: absolute;
+    width: 1443px;
+    height: 751px;
+    left: -1px;
+    top: 273px;
+
+    background: #EAEAEA;
+    border-radius: 20px 20px 0px 0px;
+}

@@ -1,0 +1,131 @@
+.email {
+    position: absolute;
+    width: 430px;
+    height: 65px;
+    left: 77px;
+    top: 401px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+}
+
+.password {
+    position: absolute;
+    width: 430px;
+    height: 65px;
+    left: 77px;
+    top: 480px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+}
+
+.submit {
+    position: absolute;
+    width: 430px;
+    height: 65px;
+    left: 77px;
+    top: 600px;
+    background: #2F8EFE;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.667);
+    border-radius: 25px;
+    border: none;
+}
+
+.submit:hover {
+    background: #434b53;
+    transform: translate3d(0, 0, 0);
+    transition: all .3s;
+}
+
+/* CSS */
+.google {
+    width: 430px;
+    height: 65px;
+    left: 77px;
+    top: 678px;
+    appearance: none;
+    backface-visibility: hidden;
+    background-color: #434b53;
+    border-radius: 25px;
+    border-style: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    height: 50px;
+    letter-spacing: normal;
+    line-height: 1.5;
+    outline: none;
+    overflow: hidden;
+    padding: 14px 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.google:hover {
+    background-color: #2F8EFE;
+    box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: .35s;
+}
+
+.google:hover:after {
+    opacity: .5;
+}
+
+.google:active {
+    box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
+    transform: translateY(2px);
+    transition-duration: .35s;
+}
+
+.google:active:after {
+    opacity: 1;
+}
+
+/* @media (min-width: 768px) {
+    .google {
+        padding: 14px 22px;
+        width: 176px;
+    }
+} */
+
+.swop {
+    width: 430px;
+    text-align: center;
+    background-color: #ffffff00;
+    position: absolute;
+    /* width: 430px; */
+    /* height: 65px; */
+    left: 77px;
+    top: 550px;
+    border: none;
+}
+
+.swop:hover {
+    cursor: pointer;
+}
+
+.logo {
+    position: absolute;
+    left: 230px;
+    top: 100px;
+}

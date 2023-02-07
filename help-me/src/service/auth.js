@@ -1,6 +1,8 @@
 import { authService, firebaseInstance } from '../Firebase';
 // import firebase from 'firebase/compat/app';
 import React, { useState } from 'react';
+import './auth.css';
+import logo from '../logo.png'
 
 const Auth = () => {
     const [email, setEmail] = useState('');
@@ -48,17 +50,19 @@ const Auth = () => {
     }
 
     return (
-        <div>
+        <div className='left'>
+            <img className='logo' src={logo}/>
             <form onSubmit={onSubmit}>
-                <input name="email" type="email" placeholder="Email" required value={email} onChange={onChange} />
-                <input name="password" type="password" placeholder="Password" required value={password} onChange={onChange} />
-                <input type="submit" value={newAccount ? "Create Account" : "Sign In"} />
+                <input className='email' name="email" type="email" placeholder="Email" required value={email} onChange={onChange} />
+                <input className='password' name="password" type="password" placeholder="Password" required value={password} onChange={onChange} />
+                <input className='submit' type="submit" value={newAccount ? "Create Account" : "Sign In"} />
                 {error}
             </form>
-            <span onClick={toggleAccount}>{newAccount ? "Sign in" : "Create Account"}</span>
             <div>
-                <button name="google" onClick={onSocialClick}>Continue with Google</button>
-                <button name="github" onClick={onSocialClick}>Continue with Github</button>
+                <button className='swop' onClick={toggleAccount}>{newAccount ? "Sign in" : "Create Account"}</button>
+            </div>
+            <div>
+                <button className='google' name="google" onClick={onSocialClick}>Continue with Google</button>
             </div>
         </div>
     );

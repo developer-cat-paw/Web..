@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AppRouters from './Pages/main'
 import { authService } from "./Firebase";
+import Loading from './Pages/Loding';
 
 function App() {
   const [init, setInit] = useState(false);
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <>
-      { init ? <AppRouters isLoggedIn={isLoggedIn}/> : "Initializing." }
+      { init ? <AppRouters isLoggedIn={isLoggedIn}/> : <Loading/> }
       {/* <footer>&copy;  {new Date().getFullYear()}</footer> */}
     </>
   );

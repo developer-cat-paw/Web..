@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css'
 import profile from '../profile.png'
 import profile2 from '../profile2.png'
+import { useHref } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -16,7 +17,9 @@ const Home = () => {
                 <div className='deg'>Degsign</div>
             </div>
             <div>
-                <div className='texts1'>
+                <div className='texts1' onClick={()=>{
+                    window.location.href = "https://github.com/korlkm"
+                }}>
                     <img className='profile' src={profile}></img>
                     <div className='name'>이경민</div>
                     <div className='tag-and'>And</div>
